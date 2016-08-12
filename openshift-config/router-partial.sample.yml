@@ -1,0 +1,18 @@
+        -
+          name: router-udp-radius
+          image: '172.30.200.195:5000/default/router-udp:latest'
+          ports:
+            -
+              hostPort: 1812
+              containerPort: 1812
+              protocol: UDP
+          env:
+            -
+              name: SERVER_IP
+              value: 172.30.93.166
+            -
+              name: PORT_IN
+              value: '1812'
+            -
+              name: PORT_OUT
+              value: '1812'
